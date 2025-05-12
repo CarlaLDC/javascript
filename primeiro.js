@@ -1,11 +1,60 @@
-import prompt from "prompt-sync";
+import prompt from 'prompt-sync'
 let ler = prompt ( )
 
-console.log (`Informe um número: `)
-let numero = Number ( ler ( ) )
+//Crie um algoritmo para ler 10 números inteiros e mostrar os números pares deste vetor;
 
-let conta = '';
+let numeros = []
+let pares = []
 
-for ( let i = 1; i <= numero; i++ ) {
-    console.log(i)
+console.log(`Informe dez algoritmos.`)
+
+for ( let i = 0; i < 10; i++ ){
+    let numero = Number ( ler ( ) )
+    numeros[i] = numero
+
+    if ( numeros[i] % 2 == 0 ){
+        pares[i] = numeros[i]
+    }
+
 }
+
+console.log(`Os números pares são:`)
+
+for ( let items of pares ) {
+    console.log ( items )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

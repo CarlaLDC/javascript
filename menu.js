@@ -1,59 +1,45 @@
-import prompt from 'prompt-sync'
-let ler = prompt();
-import { perguntaConvertida, perguntaSigla, perguntaSiglaDois, menu, conversao } from './funcao.js';
-let v = []
+import prompt from "prompt-sync";
+let ler = prompt()
 
-let continuar = true;
+import {mensagemMenu, atual, destino, CelsiusParaKelvin, CelsiusParaFahre  } from "./funcoes.js";
+1
+let continuar = true
 
-while (continuar) {
+while ( continuar ) {
 
-    for (;;) {
+    let escolha = mensagemMenu()
 
-        let a = perguntaConvertida( );
+    if ( escolha == 1 ){
 
-            if ( a === "parar" ) {
-                continuar = false;
-                break;
+        atual()
+
+        destino()
+
+        if ( atual == 'C' || atual == 'c'  ) {
+             if ( destino == 'F' || destino == 'f' ) {
+                 onsole.log(`A temperatura do destino será: ${CelsiusParaFahre(temperatura)}`)
             }
+ 
+        }
 
-        let b = perguntaSigla( );
+      
+        else if ( atual == 'C' || atual == 'c'  ) {
+            if ( destino == 'K' || destino == 'k' )
+                console.log(`A temperatura do destino será: ${CelsiusParaKelvin(temperatura)}`)
+            
+        }
+ 
+ 
 
-            if (b === "parar") {
-                continuar = false;
-                break;
-            }
-
-        let c = perguntaSiglaDois( );
-
-            if ( c === "parar" ) {
-                continuar = false;
-                break;
-            }
-
-        let ordem = [a, b, c];
-
-        v.push(ordem);
     }
 
-console.log("Deseja ver a lista?");
-let resposta = ler();
-
-    if (resposta.toLowerCase() === "sim") {
-        menu();
+    else { 
+        continuar = false
+        break
     }
 
-    let respostaDois= ler()
 
 
-    if ( respostaDois == "1" ) {
-        continue;
-    }
 
-    else if ( respostaDois == 2 ) {
-
-            let result = conversao( v[0], v[1], v[2] );
-
-            console.log( result ); 
-    }
+   
 }
-

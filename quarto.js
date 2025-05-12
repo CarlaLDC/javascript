@@ -1,21 +1,48 @@
-import prompt from "prompt-sync";
+import prompt from 'prompt-sync'
 let ler = prompt ( )
 
-console.log (`Informe um número: `)
-let numero = Number ( ler ( ) )
+// Faça um algoritmo para ler um vetor com 10 elementos e inverter a posição destes
+//elementos, de tal modo que o primeiro elemento venha a ser o último depois da
+//inversão;
 
-console.log (`Informe outro número: `)
-let numeroDois = Number ( ler ( ) )
+let numeros = []
+let inversao = []
 
-let conta = '';
+console.log(`Informe dez algoritmos.`)
 
-for ( let i = numero; i >= numeroDois; i--) {
-    console.log ( i )
+
+for ( let i = 0; i != 10; i++ ){
+    let numero = Number ( ler ( ) )
+    numeros[i] = numero 
+
 }
 
-/*
-    numero tem que ser = i 
-    i tem que ser maior q numero dois e igual
-    i tem que tirar 1 
+// for ( let i = 1; i != numero; i++ ) {
+//     console.log (numero - i)
 
-*/
+// }
+
+//     if ( numeros[i] > 0 ) {
+//         numeros[i] = numeros[i] +  1
+//     }
+// }
+
+console.log(`Os números invertidos ficam:`)
+
+for ( let items of numeros ) {
+    console.log ( items )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

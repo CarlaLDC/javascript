@@ -1,19 +1,60 @@
 import prompt from 'prompt-sync'
 let ler = prompt()
 
-console.log ('Me informe seu salário base')
-let salario = Number (ler())
+console.log('Me diga seu nome')
+let nome = ler()
 
-console.log ('Informe a porcentagem do seu bonus mensal')
-let bonus = Number (ler())
+console.log('Me diga seu salário')
+let salario = Number(ler())
 
-console.log('Informe o valor do seu desconto do mês')
-let desconto = Number (ler())
+console.log('Me diga quantos anos vc está na empresa')
+let ano = Number(ler())
 
-let conta = salario * bonus / 100
+let escolha = '';
 
-let conta2 = conta + salario
+if (ano == 3 ) {
+    escolha = (salario * 3 / 100) + salario
+}
 
-let conta3 = conta2 - desconto
+else if (ano => 3 || ano <= 10) {
+    escolha = (salario * 12.5 / 100) + salario
+}
 
-console.log ('Seu salário liquido é de R$ ' + conta3 )
+else if (ano >= 10) {
+    escolha = (salario * 20 / 100 )+ salario
+}
+
+else {
+    escolha = 'Você foi demitido!'
+}
+
+console.log('Seu novo salário é ' + escolha )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

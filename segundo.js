@@ -1,12 +1,47 @@
-import prompt from "prompt-sync";
+import prompt from 'prompt-sync'
 let ler = prompt ( )
 
-console.log (`Informe um número: `)
-let numero = Number ( ler ( ) )
+//Crie um algoritmo para ler 15 números inteiros e mostrar no final, os que forem maiores ou igual a 10;
 
-let conta = '';
+let numeros = []
+let maiorIgualDez = []
 
-for ( let i = 1; i != numero; i++ ) {
-    console.log (numero - i)
+
+console.log(`Informe quinze algoritmos.`)
+
+for ( let i = 0; i < 15; i++ ){
+    let numero = Number ( ler ( ) )
+    numeros[i] = numero
+
+    if ( numeros[i] > 10 || numeros[i] == 10){
+        maiorIgualDez[i] = numeros[i]
+    }
 
 }
+
+console.log(`Os números maiores ou igual a dez são:`)
+
+for ( let items of maiorIgualDez ) {
+    console.log ( items )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
